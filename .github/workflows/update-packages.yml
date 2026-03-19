@@ -8,7 +8,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  issues: write
 
 jobs:
   update-packages:
@@ -25,10 +24,3 @@ jobs:
 
       - name: Update flake packages
         uses: selfuryon/nix-update-action@v1
-        with:
-          token: ${{ secrets.GH_TOKEN_FOR_UPDATES != '' && secrets.GH_TOKEN_FOR_UPDATES || github.token }}
-          branch: update/packages
-          pr-title: "Packages: update"
-          pr-labels: |
-            dependencies
-            automated

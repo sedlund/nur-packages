@@ -25,10 +25,3 @@ jobs:
 
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@v3
-        with:
-          token: ${{ secrets.GH_TOKEN_FOR_UPDATES != '' && secrets.GH_TOKEN_FOR_UPDATES || github.token }}
-          branch: update/flake-lock
-          pr-title: "flake.lock: update"
-          pr-labels: |
-            dependencies
-            automated
