@@ -38,7 +38,7 @@ jobs:
 
           for pkg in $packages; do
             echo "Updating package: $pkg"
-            nix run nixpkgs#nix-update -- --commit "$pkg"
+            nix run nixpkgs#nix-update -- --flake --commit "$pkg"
           done
 
       - name: Create pull request
