@@ -20,6 +20,7 @@ buildGo126Module (finalAttrs: {
   ldflags = [
     "-s"
     "-w"
+    "-X main.GitTag=${finalAttrs.version}"
   ];
 
   meta = {
