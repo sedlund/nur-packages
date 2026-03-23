@@ -31,3 +31,30 @@ nix.settings = {
 | Package  | Description                                                 | URL                                |
 | -------- | ----------------------------------------------------------- | ---------------------------------- |
 | `ghoten` | OpenTofu fork with ORAS backend and additional integrations | https://github.com/vmvarela/ghoten |
+
+## Automation
+
+This repo ships two manual/scheduled update workflows:
+
+- `Packages: update` updates all exported flake packages (from `packages.x86_64-linux`) using `nix-update`.
+- `Flake.lock: update` updates both lock files in one run:
+  - `flake.lock`
+  - `dev/flake.lock`
+
+Both workflows support `workflow_dispatch` from the GitHub Actions UI.
+
+## Dev Inputs
+
+Development-only flake inputs are partitioned under `dev/` using `flake-parts` partitions.
+
+- Dev-only inputs: `treefmt-nix`, `git-hooks.nix`
+- Consumer-facing package evaluation stays in the top-level flake output, so users of this flake do not need to pull in those dev inputs for normal package use.
+
+## Lockfiles
+
+When updating flake inputs locally:
+
+```bash
+nix flake update
+nix flake update --flake ./dev
+```
