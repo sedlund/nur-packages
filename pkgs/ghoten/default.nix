@@ -20,7 +20,8 @@ buildGo126Module (finalAttrs: {
   ldflags = [
     "-s"
     "-w"
-    "-X main.GitTag=${finalAttrs.version}"
+    "-X github.com/vmvarela/ghoten/version.dev=no"
+    "-X github.com/vmvarela/ghoten/version.versionOverride=${finalAttrs.version}"
   ];
 
   meta = {
