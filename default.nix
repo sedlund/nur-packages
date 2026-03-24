@@ -16,6 +16,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  deploy-rs = pkgs.callPackage ./pkgs/deploy-rs { };
   ghoten = pkgs.callPackage ./pkgs/ghoten { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...

@@ -28,9 +28,10 @@ nix.settings = {
 
 ## Packages
 
-| Package  | Description                                                 | URL                                |
-| -------- | ----------------------------------------------------------- | ---------------------------------- |
-| `ghoten` | OpenTofu fork with ORAS backend and additional integrations | https://github.com/vmvarela/ghoten |
+| Package     | Description                                                 | URL                                   |
+| ----------- | ----------------------------------------------------------- | ------------------------------------- |
+| `deploy-rs` | `deploy-rs` fork packaged from `neunenak/deploy-rs`         | https://github.com/neunenak/deploy-rs |
+| `ghoten`    | OpenTofu fork with ORAS backend and additional integrations | https://github.com/vmvarela/ghoten    |
 
 ## Automation
 
