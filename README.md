@@ -30,13 +30,8 @@ nix.settings = {
 
 | Package     | Description                                                 | URL                                             |
 | ----------- | ----------------------------------------------------------- | ----------------------------------------------- |
-| `bws`       | Bitwarden Secrets Manager CLI from nixpkgs (unfree)         | https://bitwarden.com/help/secrets-manager-cli/ |
 | `deploy-rs` | `deploy-rs` fork packaged from `neunenak/deploy-rs`         | https://github.com/neunenak/deploy-rs           |
 | `ghoten`    | OpenTofu fork with ORAS backend and additional integrations | https://github.com/vmvarela/ghoten              |
-
-`bws` is unfree and is therefore built by this repository's GitHub Actions
-workflow and pushed to the `sedlund` Cachix cache instead of relying on the
-public nixpkgs cache.
 
 ## Automation
 
